@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ViewMVM.ViewModels"
+             x:Class="ViewMVM.View.NovelaView">
+    <ContentPage.BindingContext>
+        <viewmodels:ModelNovela/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="0,40,0,0">
+            <Label Text="Novela" TextColor="OrangeRed"
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding Novela.Titulo}"
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text="Autor" TextColor="OrangeRed"
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding Novela.Autor}"
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text="Género" TextColor="OrangeRed"
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding Novela.Genero}"
+                   HorizontalOptions="FillAndExpand"/>
+            <Button Text="Mostrar Descripción"
+                    Command="{Binding MostrarNovela}"
+                    HorizontalOptions="FillAndExpand"/>
+            <Label Text="{Binding Descripcion}"
+                   FontSize="30" TextColor="Red"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
